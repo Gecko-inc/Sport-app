@@ -1,0 +1,932 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+.container{
+    max-width: 417px;
+    margin: 0px auto;
+    background-color: #fff;
+    height: 100vh;
+    position: relative;
+    overflow: auto;
+}
+
+.profile_report-achievements-elements{
+    display: flex;
+    flex-direction: column;
+    gap: 15px 0px;
+}
+
+.profile_report-achievements-title p{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Open Sans';
+    color: #5A738F;
+    margin-bottom: 30px;
+}
+
+.profile_report-achievements-elem{
+    display: flex;
+    align-items: center;
+}
+
+.achievements-elem_img{
+    background-color: #C25561;
+    border-radius: 20px;
+    padding: 8px 10px;
+    margin-right: 15px;
+}
+
+.achievements-elem_descr-title{
+    font-family: 'Montserrat',
+    sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: #5A738F;
+    margin-bottom: 10px;
+}
+
+.achievements-elem_descr-text{
+    font-family: 'Montserrat',
+    sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: #5A738F;
+}
+
+.profile_report-achievements{
+    padding: 0px 4%;
+    margin-bottom: 30px;
+}
+
+.club-elements{
+    padding: 0px 4%;
+    margin-top: 30px;
+}
+
+.club-elem{
+    display: flex;
+    justify-content: space-between;
+    background-color: #B8D8F9;
+    padding: 17px 16px;
+    border-radius: 20px;
+    height: 98px;
+    cursor: pointer;
+}
+
+.club_details{
+    margin: 30px 0px;
+}
+
+.club_details{
+    padding: 0px 4%;
+}
+
+.club_details-title p{
+    font-family: 'Montserrat',
+    sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #5A738F;
+}
+
+.club_details-descr p{
+    font-family: 'Montserrat',
+    sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.club_details-descr p:nth-child(2){
+    margin: 15px 0;
+}
+
+.club_details-coach p{
+    font-family: 'Montserrat',
+    sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 15px;
+    color: #5A738F;
+}
+
+.club_details-coach_card{
+    background-color: #B9D8F9;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+}
+
+.coach_card-info-name{
+    font-family: 'Montserrat',
+    sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 5px;
+    color: #5A738F;
+}
+
+.coach_card-info-regalia{
+    font-family: 'Montserrat',
+    sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: #5A738F;
+}
+
+.coach_card-info{
+    max-width: 190px;
+}
+
+.club_details-timetable_title p{
+    font-family: 'Montserrat',
+    sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    color: #5A738F;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.traner_sections{
+    padding: 0px 4%;
+}
+
+.traner_sect{
+    background-color: #C1CBD6;
+    border-radius: 20px;
+    padding: 15px 20px;
+}
+
+
+
+.club_details-timetable table{
+    background-color: #fff;
+    border: 13px solid rgba(185, 216, 249, 0.4);
+}
+
+.club_details-timetable tbody{
+    background-color: #fff;
+}
+
+.club_details-timetable table td{
+    font-family: 'Montserrat',
+    sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    color: #3D4D60;
+    padding: 8px;
+    background-color: rgba(185, 216, 249, 0.4);
+}
+
+.coach_card-info-phone{
+    font-family: 'Montserrat',
+    sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: #5A738F;
+}
+
+.coach_card-info-mail{
+    font-family: 'Montserrat',
+    sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    margin-bottom: 0px;
+    color: #5A738F;
+}
+
+.club_details-сoach{
+    margin-top: 30px;
+}
+
+.club-elem_arrow{
+    display: flex;
+}
+
+.club-elem_ovner{
+    display: flex;
+    align-items: center;
+}
+
+.club-elem_img{
+    margin-right: 17px;
+}
+
+.club-elem_title p{
+    font-family: 'Montserrat',
+    sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #5A738F;
+    max-width: 190px;
+}
+
+.auth_logo-img_title{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 35px;
+    color: #3D4D60;
+    text-align: center;
+}
+
+.auth_logo-img_buttons{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 45px;
+    gap: 25px;
+}
+
+.auth_logo-img_buttons .btn{
+    font-size: 25px;
+    color: #3D4D60;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    padding: 7px;
+    outline: none;
+}
+
+.home-header{
+    width: 100%;
+    text-align: center;
+    top: 0;
+    padding-top: 15px;
+    padding-bottom: 13px;
+    border-bottom: 3px solid #B8D8F9;
+    position: relative;
+}
+
+.home_header-title p{
+    color: #B8D8F9;
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.training_schedule{
+    background-color: #B8D8F9;
+    padding: 20px;
+    margin: 0px 4%;
+    margin-top: 30px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+.training_detail-elem{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: rgba(184, 216, 249, 0.3);
+    border-radius: 20px;
+    padding: 11px 20px;
+}
+
+.training_detail-elements{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.traning-elem_img img{
+    border-radius: 50px;
+}
+
+.traning-elem_img{
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.traning-elem_info-title{
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Open Sans';
+}
+
+.traning-elem_info-trenerName {
+    font-size: 12px;
+    font-weight: 500;
+    font-family: 'Open Sans';
+    margin-bottom: 5px;
+}
+
+.traning-elem_info-trenerTime{
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Open Sans';
+    color: #FE7B89;
+}
+
+.traner_sect-title p{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Open Sans';
+    color: #5A738F;
+    margin-bottom: 10px;
+}
+
+.traner_sect-num p{
+font-size: 12px;
+font-weight: bold;
+font-family: 'Open Sans';
+color: #5A738F;
+}
+
+.students-list{
+    display: none;
+}
+
+.traning-list{
+    display: none;
+}
+
+.form-create_traning{
+    display: none;
+}
+
+.traner_sect{
+    cursor: pointer;
+}
+
+.traning-filter_content{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.teraner_traning-content {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 0px 4%;
+}
+
+.traning-content_title p{
+    color: #5A738F;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Open Sans';
+}
+
+.traning-elem_data p{
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Open Sans';
+    color: #B8D8F9;
+}
+
+.traning-elem_imgAndInfo{
+    display: flex;
+}
+
+.training_detail{
+    margin: 0px 4%;
+}
+
+.training_schedule-elements{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.training_schedule-elem{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 9px 13px;
+    background-color: #fff;
+    border-radius: 17px;
+}
+
+.training_schedule-elem p{
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Open Sans';
+}
+
+.training_detail-title p{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Open Sans';
+    color: #3D4D60;
+}
+
+.training_detail-title{
+    margin-bottom: 20px;
+}
+
+.training_schedule-title p{
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-family: 'Open Sans';
+}
+
+.home_menu{
+    position: absolute;
+    transform: translateY(18%);
+    left: 4%;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.block_home-menu{
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.nav_home-menu{
+    height: 100%;
+    width: 72%;
+    background-color: #fff;
+    padding-top: 20%;
+}
+
+.nav_home-menu div{
+    margin-left: 30px;
+    margin-right: 30px;
+    background-color: #B8D8F9;
+    padding: 2px 10px;
+    color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-height: 49px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.block_home-menu{
+    display: none;
+}
+
+.bars_nav-menu{
+    position: absolute;
+    bottom: 0;
+}
+
+.profile_contact-data{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 4%;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 3px solid rgba(185, 216, 249, 0.5);
+}
+
+.name_person{
+    font-size: 20px;
+    font-family: 'Montserrat';
+    margin-bottom: 10px;
+    color: #3D4D60;
+}
+
+.group_person{
+    font-size: 12px;
+    font-family: 'Montserrat';
+    color: #3D4D60;
+}
+
+.profile_contact-data-img img{
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+.nav_home-menu div:nth-child(2) img{
+    margin-right: 0px;
+}
+
+body{
+    overflow: hidden;
+}
+
+.profile_report{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 0px 4%;
+}
+
+.profile_report-title p{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Open Sans';
+    color: #5A738F;
+}
+
+.profile_report-general{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 4%;
+    gap: 15px 0px;
+}
+
+.report-general{
+        padding: 20px;
+        border-radius: 20px;
+        border: 3px solid #FD7785;
+        display: flex;
+        justify-content: space-between;
+        height: 65px;
+        align-items: center;
+}
+
+.general-time_text{
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Open Sans';
+    color: #5A738F;
+    max-width: 160px;
+}
+
+.general-time_num{
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Open Sans';
+    color: #FD7785;
+}
+
+.general-section_text {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Open Sans';
+    color: #5A738F;
+    max-width: 160px;
+}
+
+.profile_report-generalDetail{
+    margin-top: 15px;
+    margin-bottom: 30px;
+    padding: 0px 4%;
+}
+
+.generalDetail-elements{
+    display: flex;
+    flex-direction: column;
+    gap: 15px 0px;
+}
+
+.generalDetail-elem-title p{
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Open Sans';
+    color: #5A738F;
+    margin-bottom: 10px;
+}
+
+.generalDetail-elem-stat{
+    display: flex;
+    padding: 14px 20px;
+    background-color: rgba(185, 216, 249, 0.5);
+    border-radius: 20px;
+}
+.generalDetail-elem-stat-allTime{
+    margin: auto;
+        border-left: 3px solid #fff;
+        border-right: 3px solid #fff;
+        padding-left: 6%;
+        padding-right: 6%;
+}
+
+.generalDetail-elem-stat-title{
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'Open Sans';
+    text-align: center;
+    color: #5A738F;
+    margin-bottom: 2px;
+}
+
+.generalDetail-elem-stat-num{
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Open Sans';
+    text-align: center;
+    color: #FD7785;
+}
+
+.general-section_num {
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Open Sans';
+    color: #FD7785;
+}
+
+.nav_home-menu div img{
+    margin-right: 10px;
+}
+
+.nav_home-menu div:last-child{
+    margin-bottom: 0px;
+}
+
+.nav_home-menu div a{
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Open Sans';
+    color: #fff;
+    text-decoration: none;
+}
+
+.head_auth{
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #fff;
+}
+
+.auth_form input{
+        font-size: 20px;
+        padding: 13px;
+        font-family: 'Montserrat',
+        sans-serif;
+        border:3px solid #3D4D60;
+        background-color: rgba(255, 255, 255, 0.1);
+}
+
+.form_register input{
+    font-size: 20px;
+    outline: none;
+    padding: 13px;
+    font-family: 'Montserrat',
+    sans-serif;
+    border:3px solid #3D4D60;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.head_auth-arrow img{
+    position: absolute;
+    top: 0;
+    left: 4%;
+    cursor: pointer;
+    transform: translateY(100%);
+}
+
+.head_auth-title p{
+    font-size: 25px;
+    font-weight: 500;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#form_img-top {
+    position: absolute;
+    top: -45px;
+    left: -45px;
+    width: 100%;
+}
+
+#form_img-bottom{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+    
+
+.block-auth_form{
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block-auth_form::after{
+    background: url('../img/background-top.png');
+    background-size: cover;
+}
+
+.block-auth_form::before{
+    background: url('../img/background-bottom.png');
+     background-size: cover;
+}
+
+.auth_form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 100;
+}
+
+.auth_form-title{
+    margin-bottom: 15px;
+}
+
+.nav-menu {
+    max-height: 100px;
+    user-select: none;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background: #fff;
+}
+
+.nav-menu a {
+    font-size: 12px;
+    padding: 6px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #76787a;
+    font-weight: 600;
+}
+
+.top_block{
+    height: 28%;
+    background: linear-gradient(39deg, rgba(188, 0, 217, 0.7961607142857143) 36%, rgba(100, 0, 115, 0.801875) 65%);
+    padding: 15px 4% 0px 4%;
+    border-bottom-right-radius: 45px;
+}
+
+.auth_logo-img img{
+    width: 163px;
+    height: 163px;
+}
+
+body{
+    background: url(../img/background.jpg);
+    background-size: contain;
+}
+
+.section-home_title{
+    color: #fff;
+    font-size: 21px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    margin-bottom: 30px;
+}
+
+.micro-stat{
+    display: flex;
+    justify-content: space-between;
+}
+
+.micro-stat_elem p{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.micro-stat_elem{
+    color: #fff;
+}
+
+.micro-stat_elem span{
+    font-size: 25px;
+    font-weight: 800;
+}
+
+
+.train_week-timesheet{
+    display: flex;
+    justify-content: space-between;
+}
+
+.train_week{
+    background: #fff;
+    border-radius: 5px;
+    padding: 10px 2%;
+    margin-top: 25px;
+}
+
+.train_week-title p{
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.train_week-timesheet_elem{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    position: relative;
+    padding: 4px;
+border-radius: 5px;
+}
+
+.day{
+    font-weight: 600;
+}
+
+.train_week-timesheet_elem{
+    cursor: pointer;
+}
+
+.only_count {
+    position: absolute;
+    background: #ff4d4d;
+    color: #fff;
+    z-index: 10;
+    text-align: center;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 13px;
+    left: 15px;
+    top: -5px;
+    width: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.only_count_content {
+    position: absolute;
+}
+
+.train_week-title{
+    display: flex;
+    justify-content: space-between;
+}
+
+#timesheet-detail_train{
+    text-align: center;
+    font-size: 18px;
+    margin: 15px 0px;
+    font-weight: 600;
+}
+
+.detail_img-train{
+    background: url(../img/swimmer.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 10px 10px 10px 55px;
+    border-radius: 5px;
+    background-position-x: 5px;
+    background-color: #80d4ff;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.block_home-train{
+    margin-top: 40px;
+}
+
+.content_home-train{
+    padding: 15px 4%;
+    padding-top: 15px;
+    background: #fff;
+    -webkit-box-shadow: 0px 0px 40px -16px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 40px -16px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 40px -16px rgba(0,0,0,0.75);
+}
+
+.home-train_title{
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+@media screen and (min-width: 417px) {
+.bn_ico img{
+    font-size: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.2vw;
+    height: 100%;
+    margin: 0px auto;
+        min-width: 46px;
+        min-height: 73px;
+}
+}
+    
+
+@media screen and (min-width: 320px) {
+.bn_ico {
+    width: 8vw;
+    height: 8vw;
+    max-width: 80px;
+    max-height: 75px;
+}
+}
+    

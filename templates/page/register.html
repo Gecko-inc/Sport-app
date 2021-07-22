@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+   Регистрация
+{% endblock %}
+
+{% block content %}
+        
+        <div class="head_auth">
+                <div class="head_auth-arrow" onclick="return window.location.href='/auth/'">
+                    <img src="{% static 'img/arrow_back.svg' %}" alt="">
+                </div>
+                <div class="head_auth-title">
+                    <p>Регистрация</p>
+                </div>
+            </div>
+        <div class="block-auth_form">
+            <img id="form_img-top" src="{% static 'img/background-top.png' %}" alt="">
+            
+            <form class="form_register" method="post">
+                <div class="form_username">
+                    {{ form.username }}
+                </div>
+                <div class="form_first-name">
+                    {{ form.first_name }}
+                </div>
+                <div class="form_last-name">
+                    {{ form.last_name }}
+                </div>
+                <div class="form_patronymic">
+                    {{ form.patronymic }}
+                </div>
+                <div class="form_group">
+                    {{ form.group }}
+                </div>
+                <div class="form_password">
+                    {{ form.password }}
+                </div>
+                <div class="form_password2">
+                    {{ form.password2 }}
+                </div>
+                {% csrf_token %}
+                <p><input class="button_register" type="submit" value="Регистрация"></p>
+            </form>
+            <img id="form_img-bottom" src="{% static 'img/background-bottom.png' %}" alt="">
+        </div>
+
+        <style>
+        .block-auth_form form{
+                z-index: 1000;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+        }
+            .nav-menu{
+                display: none;
+            }
+
+            .button_register{
+                color: #fff;
+    font-size: 25px;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    border-radius: 20px;
+    padding: 10px 0px;
+    border: 0px!important;
+    width: 100%;
+    outline: none;
+    cursor: pointer;
+    background-color: #FE7B89!important;
+
+            }
+        </style>
+
+        <script>
+            document.querySelector('.form_username input').setAttribute("placeholder", 'Логин')
+            document.querySelector('.form_first-name input').setAttribute("placeholder", 'Имя')
+            document.querySelector('.form_last-name input').setAttribute("placeholder", 'Фамилия')
+            document.querySelector('.form_patronymic input').setAttribute("placeholder", 'Отчество')
+            document.querySelector('.form_group input').setAttribute("placeholder", 'Группа')
+            document.querySelector('.form_password input').setAttribute("placeholder", 'Пароль')
+            document.querySelector('.form_password2 input').setAttribute("placeholder", 'Пароль')
+        </script>
+{% endblock %}

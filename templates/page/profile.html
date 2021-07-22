@@ -1,0 +1,145 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Редактировать пользователя
+{% endblock %}
+
+{% block content %}
+        <div class="block_home-menu animate__animated">
+            <nav class="nav_home-menu">
+                <div onclick="return window.location.href='/profile/{{ request.user.id }}/'" class="profile">
+                    <img src="{% static 'img/profile.svg' %}" alt="">
+                    <a href="/profile/{{ request.user.id }}">Профиль</a>
+                </div>
+                <div onclick="return window.location.href='/'" class="home">
+                    <img src="{% static 'img/calend.svg' %}" alt="">
+                    <a href="/">Главная</a>
+                </div>
+                <div onclick="return window.location.href='/sections/'" class="club">
+                    <img src="{% static 'img/sect.svg' %}" alt="">
+                    <a href="/sections/">Клубы</a>
+                </div>
+                <div class="norms">
+                    <img src="{% static 'img/normativ.svg' %}" alt="">
+                    <a href="#">Нормативы</a>
+                </div>
+
+                <img class="bars_nav-menu" src="{% static 'img/bars.jpg' %}" alt="">
+            </nav>
+        </div>
+        <div class="home-header">
+            <div id="button_showMenu" onclick="activateMenu()" class="home_menu">
+                <img src="{% static 'img/buttonMenu.jpg' %}" alt="">
+            </div>
+            <div class="home_header-title">
+                <p>Профиль</p>
+            </div>
+        </div>
+        <div class="profile_contact-data">
+            <div class="profile_contact-data-info">
+                <p class="name_person">{{ user.last_name }} {{ user.first_name }} {{ user.patronymic }}</p>
+                <p class="group_person">{{ user.last_login }}</p>
+                <p class="group_person">{{ user.group }}</p>
+            </div>
+            <div class="profile_contact-data-img">
+                <img src="{% static user.qr_path %}" alt="">
+            </div>
+        </div>
+        <div class="profile_report">
+            <div class="profile_report-title">
+                <p>Отчет</p>
+            </div>
+        </div>
+
+        <div class="profile_report-general">
+            <div class="report-general">
+                <p class="general-time_text">Общее время всех тренировок:</p>
+                <p class="general-time_num">144 ч.</p>
+            </div>
+            <div class="report-general">
+                <p class="general-section_text">Общее число секций:</p>
+                <p class="general-section_num">4</p>
+            </div>
+        </div>
+         <div class="profile_report-generalDetail">
+             <div class="generalDetail-elements">
+                 <div class="generalDetail-elem">
+                     <div class="generalDetail-elem-title">
+                         <p>Баскетбол</p>
+                     </div>
+                     <div class="generalDetail-elem-stat">
+                        <div class="generalDetail-elem-stat-training">
+                            <p class="generalDetail-elem-stat-title">Тренировки:</p>
+                            <p class="generalDetail-elem-stat-num">30</p>
+                        </div>
+                        <div class="generalDetail-elem-stat-allTime">
+                            <p class="generalDetail-elem-stat-title">Общее время:</p>
+                            <p class="generalDetail-elem-stat-num">60</p>
+                        </div>
+                        <div class="generalDetail-elem-stat-competitions">
+                            <p class="generalDetail-elem-stat-title">Соревнования:</p>
+                            <p class="generalDetail-elem-stat-num">5</p>
+                        </div>
+                     </div>
+                 </div>
+                 <div class="generalDetail-elem">
+                     <div class="generalDetail-elem-title">
+                         <p>Волейбол</p>
+                     </div>
+                     <div class="generalDetail-elem-stat">
+                        <div class="generalDetail-elem-stat-training">
+                            <p class="generalDetail-elem-stat-title">Тренировки:</p>
+                            <p class="generalDetail-elem-stat-num">30</p>
+                        </div>
+                        <div class="generalDetail-elem-stat-allTime">
+                            <p class="generalDetail-elem-stat-title">Общее время:</p>
+                            <p class="generalDetail-elem-stat-num">60</p>
+                        </div>
+                        <div class="generalDetail-elem-stat-competitions">
+                            <p class="generalDetail-elem-stat-title">Соревнования:</p>
+                            <p class="generalDetail-elem-stat-num">5</p>
+                        </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+
+        <div class="profile_report-achievements">
+            <div class="profile_report-achievements-title">
+                <p>Достижения</p>
+            </div>
+
+            <div class="profile_report-achievements-elements">
+                <div class="profile_report-achievements-elem">
+                    <div class="achievements-elem_img">
+                        <img src="{% static 'img/trophy.svg' %}" alt="">
+                    </div>
+                    <div class="achievements-elem_descr">
+                        <p class="achievements-elem_descr-title">Золотой кубок</p>
+                        <p class="achievements-elem_descr-text">1 место в Региональном соревновании по баскетболу в г. Пскове</p>
+                    </div>
+                </div>
+                <div class="profile_report-achievements-elem">
+                    <div class="achievements-elem_img">
+                        <img src="{% static 'img/medal.svg' %}" alt="">
+                    </div>
+                    <div class="achievements-elem_descr">
+                        <p class="achievements-elem_descr-title">Серебряннная медаль</p>
+                        <p class="achievements-elem_descr-text">2 место в Международном соревновании по баскетболу в г. Москве</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script>
+        var counterMenu = 0
+        function activateMenu(){
+            counterMenu++
+            if(counterMenu%2 == 0){
+                document.querySelector(".block_home-menu").style.display = 'none'
+            } else {
+                document.querySelector(".block_home-menu").style.display = 'block'
+            }
+        }
+    </script>
+{% endblock %}

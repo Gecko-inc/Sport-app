@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Редактировать пользователя
+{% endblock %}
+
+{% block content %}
+        <div class="block_home-menu animate__animated">
+            <nav class="nav_home-menu">
+                <div onclick="return window.location.href='/profile/{{ request.user.id }}/'" class="profile">
+                    <img src="{% static 'img/profile.svg' %}" alt="">
+                    <a href="/profile/{{ request.user.id }}/">Профиль</a>
+                </div>
+                <div onclick="return window.location.href='/'" class="home">
+                    <img src="{% static 'img/calend.svg' %}" alt="">
+                    <a href="/">Главная</a>
+                </div>
+                <div onclick="return window.location.href='/sections/'" class="club">
+                    <img src="{% static 'img/sect.svg' %}" alt="">
+                    <a href="/sections/">Клубы</a>
+                </div>
+                <div class="norms">
+                    <img src="{% static 'img/normativ.svg' %}" alt="">
+                    <a href="#">Нормативы</a>
+                </div>
+
+                <img class="bars_nav-menu" src="{% static 'img/bars.jpg' %}" alt="">
+            </nav>
+        </div>
+        <div class="home-header">
+            <div id="button_showMenu" onclick="activateMenu()" class="home_menu">
+                <img src="{% static 'img/buttonMenu.jpg' %}" alt="">
+            </div>
+            <div class="home_header-title">
+                <p>Клубы</p>
+            </div>
+        </div>
+        <div class="club_details">
+            <div class="club_details-title">
+                <p>{{ section.title }}</p>
+            </div>
+
+            <div class="club_details-descr">
+                {{ section.description|safe }}
+            </div>
+
+            <div class="club_details-сoach">
+                <div class="club_details-coach">
+                    <p>Тренеры</p>
+                </div>
+
+                <div class="club_details-coach_card">
+                    <div class="coach_card-info">
+                        <div class="coach_card-info-name">{{ user.last_name }} {{ user.first_name }} {{ user.patronymic }}</div>
+                        <div class="coach_card-info-regalia">{{ user.description|safe }}</div>
+                        <div class="coach_card-info-mail">Е-mail: {{ user.email }}</div>
+                    </div>
+                    <div class="coach_card-img">
+                        <img src="{% static 'img/img_couch.svg' %}" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <form method="post">
+                {% csrf_token %}
+                {% if not subscribe %}
+                    <input type="hidden" name="action" value="unsub">
+                    <button type="submit">Отписаться</button>
+                {% else %}
+                    <input type="hidden" name="action" value="subscribe">
+                    <button type="submit">Подписаться</button>
+                {% endif %}
+            </form>
+
+        </div>
+    <script>
+        var counterMenu = 0
+        function activateMenu(){
+            counterMenu++
+            if(counterMenu%2 == 0){
+                document.querySelector(".block_home-menu").style.display = 'none'
+            } else {
+                document.querySelector(".block_home-menu").style.display = 'block'
+            }
+        }
+    </script>
+{% endblock %}
